@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(38, 41, 56);
+    scroll-behavior: smooth;
+}
+.cabecera{
+    background-color: rgb(4, 22, 121);
+    margin-bottom: 10px;
+    color: #fff;
+    padding: 2rem 4rem;
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+.cabecera .texto{
+    width: 80%;
+    height: 1.5rem;
+    margin: auto;
+    border: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.cabecera .logo{
+    width: 100%;
+    text-align: start;
+}
+.cabecera button{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+    height: 2rem;
+    align-items: center;
+    color: #fff;
+    background: rgb(66, 25, 212);
+    border-radius: 5px;
+    margin: auto 0px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    border: none;
+}
+.cabecera button:hover{
+    filter: brightness(1.2);
+}
+
+.cabecera img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%
+}
+.cabecera h1{
+    margin: auto 0px;
+}
+.contenedor{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+.ancla{
+    width: 90%;
+    margin: 10px auto;
+    height: 200px;
+    background-color: black;
+    z-index: 11;
+    overflow: hidden;
+    box-shadow: 2px  2px 62px rgba(46, 39, 39, 0.685);
+    transition: all .5s ease-in-out;
+    animation: baja 1.5s;
+}
+@keyframes baja {
+    0%{transform: translateY(-30px); opacity: 0;}
+    100%{transform: translateY(0px); opacity: 1;}
+}
+.ancla a{
+    width: 100%;
+    height: 100%;
+}
+.ancla a img{
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    object-fit: cover;
+    position: top;
+    transition: all .5s ease-in-out;
+
+}
+.ancla a div{
+    z-index: 11;
+    overflow: hidden;
+    height: 80%;
+    width: 100%;
+}
+.ancla a .text{
+    height: 20%;
+    width: 80%;
+    margin: auto;
+    text-decoration: none;
+    color: #fff;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+.ancla:hover img{
+    transform: scale(1.1);
+    
+}
+.ancla:hover{
+    box-shadow: 0px  0px 12px #fff;
+    
+}
+
+
+/* VIDEO */
+
+/* .cabecera1{
+    background-color: rgb(4, 22, 121);
+    margin-bottom: 10px;
+    color: #fff;
+    padding: 2rem 4rem;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    text-align: center;
+} */
+.video{
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+}
+.video .rep{
+    width: 100%;
+    height: 100%;
+}
+.previo{
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    flex-direction: row;
+    margin:  0px auto 2rem auto;
+    display: none;
+    transition: all 1s  ease-in-out;
+    bottom: 0;
+    z-index: 2;
+    animation: sube 1s ease-in-out;
+}
+@keyframes sube {
+    0%{bottom: -150px;}
+    100%{bottom: 0;}
+}
+.q{
+    flex-direction: column-reverse;
+}
+.baja{
+    bottom: -200px;
+    display: none;
+}
+.previo:hover{
+    opacity: 1;
+}
+body{
+    text-align: center;
+}
+.btn{
+    position: fixed;
+    bottom: 60px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background: transparent;
+    color: transparent;
+    transition: all 1s ease-in-out;
+    animation: caan 5s ease-in-out;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.btm{
+    background: rgba(0, 0, 0, 0.87);
+    color: #fff;
+    bottom: 200px;
+    border-radius: 50px;
+}
+.btn:hover{
+    background: rgb(4, 1, 15);
+    color: #fff;
+}
+
+@keyframes caan{
+    0%{background: rgb(4, 1, 15); color: #fff};
+    100%{ color: transparent; background: transparent};
+}
+
+
+.previo button{
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.164);
+    color: rgb(255, 244, 244);
+    transition: all .7s ease-in-out;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 11;
+    border: none;
+}
+.previo button:hover{
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.74);
+}
+.previo .prev{
+    left: 10px;
+}
+.previo .next{
+    right: 10px;
+}
+.canals{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    
+}
+.previo .canals a{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    left: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 10px;
+    
+}
+.previo .canals a img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    box-shadow: 2px 5px 15px #000;
+    top: 0;
+    filter: brightness(.7);
+    transition: all .5s ease-in-out;
+}
+.previo .canals a img:hover{
+    filter: brightness(1);
+}
+.adelante{
+    animation: carru 1s ease;
+}
+
+.atras{
+    animation: carruatr 1s ease;
+}
+
+@keyframes carru {
+    0%{transform: translateX(-200px);}
+    100%{transform: translateX(0px)}
+}
+@keyframes carruatr {
+    0%{transform: translateX(200px);}
+    100%{transform: translateX(0px)}
+}
